@@ -9,6 +9,7 @@
 
     <!-- Label for the temperature units preference [CHAR LIMIT=30] -->
     <string name="pref_sorting_label">Sorting By</string>
+    <string name="pref_sorting_summary">Select the kind of sorting that you want.</string>
 
     <!-- Label for metric option in temperature unit preference [CHAR LIMIT=25] -->
     <string name="pref_sorting_label_popular">Popular</string>

@@ -3,8 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--<EditTextPreference android:title="Your Name"-->
+        <!--android:key="username"-->
+        <!--android:summary="Please provide your username"></EditTextPreference>-->
+
+    <!--<CheckBoxPreference android:title="Application Updates"-->
+        <!--android:defaultValue="false"-->
+        <!--android:summary="This option if selected will allow the application to check for latest versions."-->
+        <!--android:key="applicationUpdates" />-->
+
     <ListPreference
         android:title="@string/pref_sorting_label"
+        android:summary="@string/pref_sorting_summary"
         android:key="@string/pref_sorting_key"
         android:defaultValue="@string/pref_sorting_popular"
         android:entryValues="@array/pref_sorting_values"
