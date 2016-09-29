@@ -2,16 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    >
 
     <ImageView
         android:id="@+id/imgPoster"
-        android:scaleType="fitCenter"
+        android:scaleType="centerCrop"
         android:layout_width="@dimen/main_poster_width"
-        android:layout_height="@dimen/main_poster_height" />
+        android:layout_height="@dimen/main_poster_height"
+        android:background="@color/colorPrimary"
+        />
 
-    <TextView
-        android:id="@+id/txtMovieTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 </LinearLayout>
