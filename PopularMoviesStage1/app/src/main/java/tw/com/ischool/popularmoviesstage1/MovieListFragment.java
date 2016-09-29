@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -102,6 +103,12 @@ public class MovieListFragment extends Fragment {
 
     private void loadMovies() {
 
+        if (!NetworkUtil.isOnline(getActivity())) {
+            String msg = getActivity().getResources().getString(R.string.no_network_message);
+            Snackbar.make(this.gridView, msg, Snackbar.LENGTH_LONG ).show();
+            return ;
+        }
+
         String sort_by = getSortingFromPreference() ;
 
         FetchMoviesTask task = new FetchMoviesTask(new FetchMoviesTask.OnGetMoviesListener() {
@@ -164,8 +171,8 @@ public class MovieListFragment extends Fragment {
             Picasso.with(context).load(posterUrl).into(imgView);
 
             //put movie title to textview
-            TextView txtView = (TextView)convertView.findViewById(R.id.txtMovieTitle);
-            txtView.setText(movie.getTitle());
+//            TextView txtView = (TextView)convertView.findViewById(R.id.txtMovieTitle);
+//            txtView.setText(movie.getTitle());
 
             return convertView ;
         }

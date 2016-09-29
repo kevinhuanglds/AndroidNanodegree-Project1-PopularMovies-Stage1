@@ -3,6 +3,8 @@
     <string name="title_activity_detail">Movie Details</string>
     <string name="title_activity_settings">Settings</string>
 
+    <string name="no_network_message">No network avalable!</string>
+
     <!--  Action Buttons -->
     <string name="action_settings">Settings</string>
     <string name="action_refresh">Refresh</string>
