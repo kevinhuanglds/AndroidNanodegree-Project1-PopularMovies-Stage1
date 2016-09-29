@@ -51,5 +51,14 @@ public class DetailActivity extends AppCompatActivity {
 
         TextView txtView = (TextView)findViewById(R.id.detailMovieTitle);
         txtView.setText(movie.getTitle());
+
+        TextView txtReleaseDate = (TextView)findViewById(R.id.detailMovieReleaseDate);
+        txtReleaseDate.setText(movie.getRelease_date());
+
+        TextView txtRating = (TextView)findViewById(R.id.detailMovieTopRating);
+        txtRating.setText(movie.getVote_average());
+
+        TextView txtOverview = (TextView)findViewById(R.id.detailMovieOverview);
+        txtOverview.setText(movie.getOverview());
     }
 }

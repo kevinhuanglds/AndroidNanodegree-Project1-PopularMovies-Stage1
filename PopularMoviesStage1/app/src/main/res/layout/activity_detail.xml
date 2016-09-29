@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+<RelativeLayout
+
     android:id="@+id/activity_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,10 +28,44 @@
         android:id="@+id/detailMovieTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/detailPoster"
+        android:layout_toRightOf="@+id/detailPoster"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:textSize="@dimen/activity_horizontal_margin"
+        android:textSize="@dimen/detail_poster_title_fontsize"
+        android:gravity="center_horizontal"
+        />
+
+    <TextView
+        android:id="@+id/detailMovieReleaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/detailPoster"
+        android:layout_below="@+id/detailMovieTitle"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/detail_poster_release_fontsize"
+        android:gravity="right"
+        />
+
+    <TextView
+        android:id="@+id/detailMovieTopRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/detailPoster"
+        android:layout_below="@+id/detailMovieReleaseDate"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/detail_poster_rating_fontsize"
+        android:gravity="right"
+        />
+
+    <TextView
+        android:id="@+id/detailMovieOverview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detailPoster"
+        android:layout_alignParentLeft="true"
+        android:textSize="@dimen/detail_poster_overview_fontsize"
         />
 
 </RelativeLayout>
+
+</ScrollView>
