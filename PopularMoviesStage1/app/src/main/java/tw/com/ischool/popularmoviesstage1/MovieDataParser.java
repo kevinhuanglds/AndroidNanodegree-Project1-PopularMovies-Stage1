@@ -35,12 +35,12 @@ public class MovieDataParser {
             for(int i=0; i<ary.length(); i++) {
                 JSONObject jsonMovie = ary.getJSONObject(i);
                 Movie movie = new Movie();
-                movie.setTitle(jsonMovie.getString(TITLE));
-                movie.setPosterPath(jsonMovie.getString(POSTER_PATH).replace("/",""));
-                movie.setOverview(jsonMovie.getString(OVERVIEW));
-                movie.setRelease_date(jsonMovie.getString(RELEASE_DATE));
-                movie.setPopularity(jsonMovie.getString(POLULARITY));
-                movie.setVote_average(jsonMovie.getString(VOTE_AVERAGE));
+                movie.setTitle( JSONUtil.getValue(jsonMovie, TITLE));
+                movie.setPosterPath(JSONUtil.getValue(jsonMovie,POSTER_PATH).replace("/",""));
+                movie.setOverview(JSONUtil.getValue(jsonMovie,OVERVIEW));
+                movie.setRelease_date(JSONUtil.getValue(jsonMovie,RELEASE_DATE));
+                movie.setPopularity(JSONUtil.getValue(jsonMovie,POLULARITY));
+                movie.setVote_average(JSONUtil.getValue(jsonMovie,VOTE_AVERAGE));
                 result.add(movie);
             }
         }
